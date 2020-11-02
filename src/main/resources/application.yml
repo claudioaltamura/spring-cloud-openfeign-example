@@ -1,0 +1,24 @@
+#https://docs.spring.io/spring-cloud-openfeign/docs/2.2.5.RELEASE/reference/html/#spring-cloud-feign-overriding-defaults
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        readTimeout: 5000
+  hystrix:
+      enabled: true
+
+#hystrix:
+#  shareSecurityContext: true
+
+server:
+  error:
+    include-stacktrace: never
+
+spring:
+  application:
+    name: openfeign-example
+  cloud:
+    loadbalancer:
+      ribbon:
+        enabled: false
